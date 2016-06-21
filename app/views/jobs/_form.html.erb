@@ -1,0 +1,73 @@
+<%= form_for(@job) do |f| %>
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% @job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :job_title %><br>
+    <%= f.text_field :job_title %>
+  </div>
+  <div class="field">
+    <%= f.label :date_applied %><br>
+    <%= f.datetime_select :date_applied %>
+  </div>
+  <div class="field">
+    <%= f.label :response_date %><br>
+    <%= f.datetime_select :response_date %>
+  </div>
+  <div class="field">
+    <%= f.label :offer %><br>
+    <%= f.check_box :offer %>
+  </div>
+  <div class="field">
+    <%= f.label :offer_salary %><br>
+    <%= f.text_field :offer_salary %>
+  </div>
+  <div class="field">
+    <%= f.label :cover_letter %><br>
+    <%= f.text_area :cover_letter %>
+  </div>
+  <div class="field">
+    <%= f.label :follow_up %><br>
+    <%= f.check_box :follow_up %>
+  </div>
+  <div class="field">
+    <%= f.label :follow_up_date %><br>
+    <%= f.datetime_select :follow_up_date %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_phone %><br>
+    <%= f.text_field :contact_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_email %><br>
+    <%= f.text_field :contact_email %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_first_name %><br>
+    <%= f.text_field :contact_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_last_name %><br>
+    <%= f.text_field :contact_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :company_id %><br>
+    <%= f.text_field :company_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @job.job_title %>
+</p>
+
+<p>
+  <strong>Date applied:</strong>
+  <%= @job.date_applied %>
+</p>
+
+<p>
+  <strong>Response date:</strong>
+  <%= @job.response_date %>
+</p>
+
+<p>
+  <strong>Offer:</strong>
+  <%= @job.offer %>
+</p>
+
+<p>
+  <strong>Offer salary:</strong>
+  <%= @job.offer_salary %>
+</p>
+
+<p>
+  <strong>Cover letter:</strong>
+  <%= @job.cover_letter %>
+</p>
+
+<p>
+  <strong>Follow up:</strong>
+  <%= @job.follow_up %>
+</p>
+
+<p>
+  <strong>Follow up date:</strong>
+  <%= @job.follow_up_date %>
+</p>
+
+<p>
+  <strong>Contact phone:</strong>
+  <%= @job.contact_phone %>
+</p>
+
+<p>
+  <strong>Contact email:</strong>
+  <%= @job.contact_email %>
+</p>
+
+<p>
+  <strong>Contact first name:</strong>
+  <%= @job.contact_first_name %>
+</p>
+
+<p>
+  <strong>Contact last name:</strong>
+  <%= @job.contact_last_name %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @job.notes %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @job.company %>
+</p>
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>
