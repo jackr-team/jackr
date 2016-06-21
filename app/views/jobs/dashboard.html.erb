@@ -1,0 +1,21 @@
+<div class="container">
+    <div id="content">
+        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+            <li class="active"><a href="#in-progress" data-toggle="tab">In Progress</a></li>
+            <li><a href="#all" data-toggle="tab">Completed</a></li>
+            <li><a href="#create-new" data-toggle="tab">Create</a></li>
+        </ul>
+        <div id="my-tab-content" class="tab-content">
+            <div class="tab-pane active" id="in-progress">
+                <%= render 'index' %>
+            </div>
+            <div class="tab-pane" id="all">
+                <h1>Orange</h1>
+                <p>orange orange orange orange orange</p>
+            </div>
+            <div class="tab-pane" id="create-new">
+                <%= render 'new' %>
+            </div>
+        </div>
+    </div>
+</div>

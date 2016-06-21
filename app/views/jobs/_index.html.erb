@@ -2,7 +2,7 @@
 
 <h1>Listing Jobs</h1>
 
-<table>
+<table class='table table-bordered'>
   <thead>
     <tr>
       <th>Job title</th>
@@ -26,6 +26,7 @@
   <tbody>
     <% @jobs.each do |job| %>
       <tr>
+        <td><%= link_to job.company_name %></td>
         <td><%= job.job_title %></td>
         <td><%= job.date_applied %></td>
         <td><%= job.response_date %></td>
@@ -39,7 +40,6 @@
         <td><%= job.contact_first_name %></td>
         <td><%= job.contact_last_name %></td>
         <td><%= job.notes %></td>
-        <td><%= job.company %></td>
         <td><%= link_to 'Show', job %></td>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>
         <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>

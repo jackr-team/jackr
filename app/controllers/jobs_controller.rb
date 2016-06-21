@@ -1,10 +1,16 @@
 class JobsController < ApplicationController
   before_action :set_job, only: [:show, :edit, :update, :destroy]
 
+
   # GET /jobs
   # GET /jobs.json
   def index
     @jobs = Job.all
+  end
+
+  def dashboard
+    @jobs = Job.all
+    @job = Job.new
   end
 
   # GET /jobs/1
@@ -25,7 +31,6 @@ class JobsController < ApplicationController
   # POST /jobs.json
   def create
     @job = Job.new(job_params)
-
     respond_to do |format|
       if @job.save
         format.html { redirect_to @job, notice: 'Job was successfully created.' }
@@ -69,6 +74,6 @@ class JobsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:job_title, :date_applied, :response_date, :offer, :offer_salary, :cover_letter, :follow_up, :follow_up_date, :contact_phone, :contact_email, :contact_first_name, :contact_last_name, :notes, :company_id)
+      params.require(:job).permit(:job_title, :date_applied, :response_date, :offer, :offer_salary, :cover_letter, :follow_up, :follow_up_date, :contact_phone, :contact_email, :contact_first_name, :contact_last_name, :notes, :company_name)
     end
 end
